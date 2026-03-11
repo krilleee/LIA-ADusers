@@ -4,24 +4,24 @@ flowchart TD
     MENU(MENY: 1. Ny användare 
     2. Avsluta)
     INPUT[/Ange för- och efternamn: Tex "Kalle Persson"/]
-    LOWERCASE[/Gör om till små bokstäver: "Kalle Persson" → "kalle persson"/]
+    NAMESPLIT[/Splitta namet till variablar för förnamn och efternamn/]
     SWEDISH[/Byt ut svenska tecken: 
     å -> a 
     ä -> a 
     ö -> o/]
-    SPLIT[/Dela upp namn: förnamn + efternamn kalle + persson/]
-    USERNAME[/Skapa username: kalle.persson/]
+    USERNAME[/Gör om till lowercase och skapa username: kalle.persson/]
     EMAIL[/Skapa mailadress: kalle.persson@lyko.com/]
-    OUTPUT([Output: 
+    OUTPUT(Output:
+    Firstname: Kalle
+    Lastname: Persson 
     Username: kalle.persson
-    Mail: kalle.persson@lyko.com])
+    Mail: kalle.persson@lyko.com)
 
     START --> MENU
     MENU --> INPUT
-    INPUT --> LOWERCASE
-    LOWERCASE --> SWEDISH
-    SWEDISH --> SPLIT
-    SPLIT --> USERNAME
+    INPUT --> NAMESPLIT
+    NAMESPLIT --> SWEDISH
+    SWEDISH --> USERNAME
     USERNAME --> EMAIL
     EMAIL-- Temp output ska in i ADt sedan ---OUTPUT
 ```
