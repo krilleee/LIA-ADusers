@@ -5,4 +5,10 @@ $choice = Read-Host "Välj ett alternativ"
 
 if ($choice -eq 1) {
     Write-Host "Vad är ditt namn"
+    $fullname = read-host "name user"
+} 
+
+if ($choice -eq 2) {
+    exit
 }
+ write-host "test"
