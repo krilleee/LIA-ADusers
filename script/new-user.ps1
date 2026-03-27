@@ -12,4 +12,7 @@ if ($choice -eq 1) {
 if ($choice -eq 2) {
     exit
 }
- write-host "test"
+
+NameSplitter nameSplitter = new NameSplitter("kalle.persson");
+String firstName = nameSplitter.getFirstName("kalle");
+String lastName = nameSplitter.getLastName("persson");
