@@ -13,6 +13,15 @@ if ($choice -eq 2) {
     exit
 }
 
-NameSplitter nameSplitter = new NameSplitter("kalle.persson");
-String firstName = nameSplitter.getFirstName("kalle");
-String lastName = nameSplitter.getLastName("persson");
+$parts = $fullname.Split(" ") 
+$firstname = $parts[0]
+$lastname = $parts[1] 
+write-host "Förnamn: $firstname"
+write-host "Efternamn: $lastname"
+$fullname = $fullname -replace "å", "a"
+$fullname = $fullname -replace "ä", "a"
+$fullname = $fullname -replace "ö", "o"
+
+$partsusername = $fullname.split(" ")
+
+write-host "$partsusername"
