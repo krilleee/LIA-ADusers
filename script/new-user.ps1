@@ -25,3 +25,4 @@ $fullname = $fullname -replace "ö", "o"
 $partsusername = $fullname.split(" ")
 
 write-host "$partsusername"
+write-host "mailadressen är $($partsusername[0]).$($partsusername[1])@lyko.com" 
