@@ -32,9 +32,9 @@ function New-User {
 
     $PSStyle.Progress.View = 'Classic'
 
-    clear
+    
 
-    clear
+    Clear-Host
     Write-Host ""
     Write-Host "Användare skapad:"
     Write-Host "Username: $username"
