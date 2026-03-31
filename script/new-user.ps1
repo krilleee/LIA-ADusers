@@ -16,6 +16,7 @@ if ($choice -eq 2) {
 $parts = $fullname.Split(" ") 
 $firstname = $parts[0]
 $lastname = $parts[1] 
+$fullname = $fullname.ToLower()
 write-host "Förnamn: $firstname"
 write-host "Efternamn: $lastname"
 $fullname = $fullname -replace "å", "a"
@@ -25,4 +26,5 @@ $fullname = $fullname -replace "ö", "o"
 $partsusername = $fullname.split(" ")
 
 write-host "$partsusername"
+write-host "användarnamn är $($partsusername[0]).$($partsusername[1])"
 write-host "mailadressen är $($partsusername[0]).$($partsusername[1])@lyko.com" 
